@@ -14,7 +14,7 @@ public class StaffImpl implements StaffDao
 	public void saveStaffDetails(Staff staff) throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		Connection con=ConnectionUtil.getConnection();
-		String s="insert into book(ISBN,name,rack_no,author,edition)values(?,?,?,?,?)";
+		String s="insert into staff(s_id,name,designation,phone)values(?,?,?,?)";
 		PreparedStatement ps=con.prepareStatement(s);
 		ps.setInt(1,staff.getId());
 		ps.setString(2, staff.getName());
